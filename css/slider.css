@@ -1,0 +1,117 @@
+.slider {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.slider .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    color: #fff;
+    right: -100%;
+    opacity: 0;
+    transition: opacity 1s ease-in, right 0s 1s;
+}
+
+.slider .active {
+    right: 0%;
+    opacity: 1;
+    transition: 1s ease;
+}
+
+.slider .slide-img {
+    position: absolute;
+    z-index: -9999;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-next, .slide-pre {
+    position: absolute;
+    height: 100%;
+    font-size: 100px;
+    vertical-align: middle;
+    color: #fff;
+    opacity: 0.3;
+}
+
+.slide-pre {
+    left: -100px;
+}
+
+.slide-next {
+    right: -100px;
+}
+
+.slide-pre:hover {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    transition: 1s ease; 
+}
+
+.slide-next:hover {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    transition: 1s ease;
+}
+
+.slider:hover .slide-pre {
+    left: 0px;
+    transition: 1s ease;
+}
+
+.slider:hover .slide-next {
+    right: 0px;
+    transition: 1s ease;
+}
+
+.slide-pre:hover, .slide-next:hover {
+    opacity: 1;
+    transition: 0.5s ease;
+}
+
+.slider .slide .slide-text {
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.slider .slide .substrate {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: -8888;
+}
+
+/* ARROWS */
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.ttf?4vkz26') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-chevron-left:before {
+    content: "\e408";
+  }
+  .icon-chevron-right:before {
+    content: "\e409";
+  }
+  
+  
+  
+  
