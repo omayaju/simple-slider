@@ -10,14 +10,14 @@ $(document).ready(function() {
     $(".slider .slide").each(function() {
         slideCount = slideCount + 1;
         var src = $(this).children(".slide-img").attr("img-src");
-        $(this).children(".slide-img").css("background", "url(" + src + ") no-repeat center top");
+        $(this).children(".slide-img").css("background", "url(" + src + ") no-repeat center center");
         $(this).children(".slide-img").css("background-size", "cover");
         $(this).attr("id", "slide-" + slideCount.toString());
-        $(this).children(".slide-text").css("padding-top", (slideHeight/2-$(this).children(".slide-text").height().toString()));
+        $(this).children(".slide-text").css("padding-top", (slideHeight/2-$(this).children(".slide-text").height()/2).toString() + "px");
     });
 
-    $(".slide-pre").css("padding-top", (slideHeight/2-80).toString() + "px");
-    $(".slide-next").css("padding-top", (slideHeight/2-80).toString() + "px");
+    $(".slide-pre").css("padding-top", (slideHeight/2-50).toString() + "px");
+    $(".slide-next").css("padding-top", (slideHeight/2-50).toString() + "px");
 
     $(".slide-pre").html("<span class=\"icon-chevron-left\"></span>&#160;");
     $(".slide-next").html("&#160;<span class=\"icon-chevron-right\"></span>");
